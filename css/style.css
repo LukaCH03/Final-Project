@@ -1,0 +1,191 @@
+/* ფერთა ცვლადები (CSS Variables) */
+:root {
+  --primary-color: #2c3e50; /* მუქი ქვისფერი */
+  --accent-color: #d4af37; /* ოქროსფერი აქცენტები */
+  --text-color: #333;
+  --bg-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* ნავიგაცია - Flexbox */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease; /* ანიმაცია (Transition) */
+}
+
+/* Pseudo-class Hover */
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+  height: 80vh;
+  background-color: #555; /* აქ ფონური ფოტო ჩასვი */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-top: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition:
+    transform 0.3s,
+    background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #b8972e;
+  transform: scale(1.05); /* Hover Effect ანიმაცია */
+}
+
+/* სერვისების Grid განლაგება */
+.services-routes {
+  padding: 50px;
+  text-align: center;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* მოქნილი ბადე CSS Grid-ით */
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.route-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Pseudo-class Hover ქარდებზე */
+.route-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-info {
+  padding: 20px;
+}
+
+/* ფუტერი */
+.main-footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+.social-icons a {
+  color: var(--accent-color);
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: white;
+}
+
+
+
+
+
+/* დანარჩენი გვერდებისთვის */
+
+/* შიდა გვერდების ძირითადი სტილი */
+.inner-page {
+  padding: 60px 50px;
+  min-height: 70vh;
+}
+
+.inner-page h1 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* კონტაქტის გვერდის განლაგება (Flexbox) */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-info,
+.contact-form {
+  flex: 1; /* ორივე იკავებს თანაბარ ადგილს */
+}
+
+/* ფორმის სტილიზაცია (ფსევდო-კლასების გამოყენებით) */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+/* ფსევდო კლასი :focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+}
+
+.contact-form button {
+  cursor: pointer;
+  border: none;
+}

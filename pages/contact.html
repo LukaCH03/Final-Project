@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/media.css" />
+  </head>
+  <body>
+
+
+    <!-- სექცია 1: Header / ნავიგაცია -->
+    <header class="main-header">
+      <div class="logo">SvanetiTravel</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html" class="">მთავარი</a></li>
+          <li><a href="../pages/about.html" class="">ჩვენს შესახებ</a></li>
+          <li><a href="../pages/services.html">სერვისები</a></li>
+          <li><a href="../pages/news.html">სიახლე</a></li>
+          <li><a href="#" class="active">კონტაქტი</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <main class="inner-page">
+      <section class="contact-section">
+        <h1>დაგვიკავშირდით</h1>
+        <div class="contact-container">
+          <!-- მარცხენა მხარე: ინფორმაცია -->
+          <div class="contact-info">
+            <h3>ჩვენი კოორდინატები</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> სათაო ოფისი: მესტია, სვანეთი
+            </p>
+            <p><i class="fas fa-phone"></i> +995 555 123 456</p>
+            <p><i class="fas fa-envelope"></i> info@svanetitravel.ge</p>
+          </div>
+
+          <!-- მარჯვენა მხარე: ფორმა -->
+          <form class="contact-form">
+            <input
+              type="text"
+              name="name"
+              placeholder="თქვენი სახელი"
+              required
+            />
+            <input type="email" name="email" placeholder="ელ.ფოსტა" required />
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="თქვენი შეტყობინება"
+              required
+            ></textarea>
+            <button type="submit" class="btn-primary">გაგზავნა</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

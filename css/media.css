@@ -1,0 +1,12 @@
+/* Responsive მობილურისთვის */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .nav-links {
+    margin-top: 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
